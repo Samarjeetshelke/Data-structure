@@ -1,4 +1,17 @@
-///Methkd 1:-....................................................................................................................................................................
+/* 
+Bubble sort in C:-
+
+To arrange numbers in ascending order; you can modify it for descending order and can also sort strings. The bubble sort algorithm isn't efficient as its both average-case 
+as well as worst-case complexity are O(n2).
+
+Bubble sort algorithm:-
+1..Start at index zero, compare the element with the next one (a[0] & a[1] (a is the name of the array)), and swap if a[0] > a[1]. Now compare a[1] & a[2] and swap if a[1] > a[2].
+Repeat this process until the end of the array. 
+2.After doing this, the largest element is present at the end. This whole thing is known as a pass. In the first pass, we processarray elements from [0,n-1].
+Repeat step one but process array elements [0, n-2] because the last one, i.e., a[n-1], is present at its correct position. 
+3.After this step, the largest two elements arepresent at the end.
+4.Repeat this process n-1 times.*/
+///Method 1:-....................................................................................................................................................................
 #include <stdio.h>
 
 int main()
@@ -75,7 +88,7 @@ void sort(int* ptr,int n){ //function defination...............
         
 } 
 //Method 3:-
-//In both thenprograamem we Haven't chale the that" if the entered nm  are already inn orderd form ".
+//In both the nprograamem we Haven't chaKe the that" if the entered numbers  are already inn orderd form ".
 #include <stdio.h>
 void sort(int* ptr,int n);
 int main()
