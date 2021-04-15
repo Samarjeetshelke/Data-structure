@@ -1,0 +1,24 @@
+Data structure:-
+              1.data structure is systimatic way to orgnize the he data ,so that it can be used efficienly.
+              ex-array=insted of creating number of variables of same type ,why not creating the array to store the data type.
+              or
+              2.data structure in way t store data element into the memory(into the main memory)in an organized manner so that the operations like addition,deletation,traversal 
+              ,searching,sorting etc.
+                 
+                   
+                                                       DATA STRUCTURE
+                             | -----------------------------------------------------------|
+                         Linear                                                       Non-Linear
+                   _________________                                             _____________________
+                  |                 |                                           |                     |
+              static             Dynamic                                      Tree                 Graph
+                 |                    |    
+                 1.Array             1.Linkedlist
+                                     2.Stack
+                                     3.Queue
+                                     
+ Need:-
+            1.There is a need of data  structure to archive 3 things in programmeing
+                    1.Efficiency
+                    2.Abstraction
+                    3.Reusabiliity
