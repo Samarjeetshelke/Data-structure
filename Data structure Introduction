@@ -7,7 +7,10 @@ Data structure:-
                  
                    
                                                        DATA STRUCTURE
-                             | -----------------------------------------------------------|
+                                                              |
+                                            non-primitive----------------------------------------------------------------------primitive 
+                                               |                                                                                   |
+                             | -----------------------------------------------------------|                             int, char, float, double, and pointer
                          Linear                                                       Non-Linear
                    _________________                                             _____________________
                   |                 |                                           |                     |
@@ -49,7 +52,7 @@ in order to solve the above problems, data structures are used. Data is organize
 required data can be searched instantly.
 
 
-Operations on data structure
+Operations on data structure:-
 1) Traversing: Every data structure contains the set of data elements. Traversing the data structure means visiting each element of the data structure in order to perform some
 specific operation like searching or sorting.
 
