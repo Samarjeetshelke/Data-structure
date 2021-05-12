@@ -1,0 +1,44 @@
+**What is the sorting? **
+
+The arrangement of data in a preferred order is called sorting in the data structure. By sorting data, it is easier to search through it quickly and easily.
+The simplest example of sorting is a dictionary. Before the era of the Internet, when you wanted to look up a word in a dictionary, you would do so in alphabetical order.
+This made it easy.
+
+**There are two different categories in sorting:**
+
+Internal sorting: 
+       If the input data is such that it can be adjusted in the main memory at once, it is called internal sorting.
+
+External sorting:
+      If the input data is such that it cannot be adjusted in the memory entirely at once, it needs to be stored in a hard disk, floppy disk, or any other storage device.
+      This is called external sorting.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      
+**Types of Sorting in Data Structure:-**
+
+Here are a few of the most common types of sorting algorithms.
+
+**1. Merge Sort**
+This algorithm works on splitting an array into two halves of comparable sizes. Each half is then sorted and merged back together by using the merge () function.
+
+Here’s how the algorithm works:
+
+MergeSort(arr[], l,  r)
+
+1.If r > l
+
+1.Divide the array into two equal halves by locating the middle point:  
+             middle m = (l+r)/2
+
+2.Use the mergeSort function to call for the first half:   
+             Call mergeSort(arr, l, m)
+
+3.Call mergeSort for the second half:
+             Call mergeSort(arr, m+1, r)
+
+4.Use the merge () function to merge the two halves sorted in step 2 and 3:
+             Call merge(arr, l, m, r)
+
+Check out the image below to get a clear picture of how this works.
+[link:-](https://www.upgrad.com/blog/wp-content/uploads/2020/05/450px-Merge_sort_algorithm_diagram.svg_.png)
+      
