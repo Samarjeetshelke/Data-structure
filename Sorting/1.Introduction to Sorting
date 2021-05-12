@@ -40,5 +40,5 @@ MergeSort(arr[], l,  r)
              Call merge(arr, l, m, r)
 
 Check out the image below to get a clear picture of how this works.
-[link:-](https://www.upgrad.com/blog/wp-content/uploads/2020/05/450px-Merge_sort_algorithm_diagram.svg_.png)
+link:-<https://www.upgrad.com/blog/wp-content/uploads/2020/05/450px-Merge_sort_algorithm_diagram.svg_.png>
       
