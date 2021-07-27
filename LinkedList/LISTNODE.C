@@ -1,14 +1,18 @@
 #include<stdio.h>
 #include<conio.h>
 
+//node
 typedef struct node{
   int data;
   struct node * next;
 }node;
 
+//slist
 typedef struct slist{
    node * head;
 }slist;
+
+// function to chake that is sorted or not
 int sortt(slist * d){
    node *a,*b;
    a = d->head;
@@ -30,6 +34,8 @@ int sortt(slist * d){
    return 1;
 
 }
+
+//function to delet all the node
 void delall(slist * d){
    node *a,*b;
    a = d->head;
@@ -40,10 +46,14 @@ void delall(slist * d){
       a=b;
    }
 }
+
+//intitial 
 void init(slist * d){
    d->head = NULL;
 }
 
+
+//create new list
 void creatlist(slist * d){
    node * a,*b,*c;
    int id;
@@ -73,6 +83,9 @@ void creatlist(slist * d){
 
 
 }
+
+
+//function ti display all data
 void disp(slist * d){
     node * x;
 
@@ -90,6 +103,8 @@ void disp(slist * d){
       getch();
 }
 
+
+//main function
 void main(){
  slist *d;
  int op,flg =0;
@@ -97,7 +112,11 @@ void main(){
  init(d);
  while(1){
     clrscr();
-    printf("\n1.creat list.\n2.display list.\n3.exit.\n4.delet.\n5.issort.");
+    printf("\n1.creat list.
+	   \n2.display list.
+	   \n3.exit.
+	   \n4.delet.
+	   \n5.issort.");
     printf("\nenter option ");
     scanf("%d",&op);
     if(op<=5 && op >=1){
