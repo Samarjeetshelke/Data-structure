@@ -7,6 +7,8 @@ typedef  struct node{
 }node;
 node * head = NULL;
 
+
+
 node * creat(int d){  // int d for data
  node * a;
  a = (node*)malloc(sizeof(node));
@@ -15,8 +17,9 @@ node * creat(int d){  // int d for data
  return a;
 }
 
-node *  getend(){
 
+
+node *  getend(){
   node * s = head;
   while(s->next != NULL){
    s = s->next;
@@ -24,12 +27,15 @@ node *  getend(){
   return s;
 }
 
+//function to add bigining
 void addbig(int d){//int d for data
  node * a;
  a = creat(d);
  a->next = head;
  head = a;
 }
+
+//function to add  end
 void addend(int d){
  node * a ,* b;
  a = creat(d);
@@ -44,6 +50,8 @@ void addend(int d){
  printf("\nNEW NODE IS INSERTD AT END");
 }
 
+
+//function to display data
 void display(){
  node * a = head;
  if(a==NULL){
