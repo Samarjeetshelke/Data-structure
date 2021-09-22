@@ -1,0 +1,104 @@
+#include<stdio.h>
+#include<conio.h>
+
+#define m 10
+
+struct que{
+	int arr[m];
+	int rr,fr;
+}q[10];
+
+
+void input(int * p){
+	int i;
+	printf("\nEnter the data:-");
+	for(i=0;i<m;){
+	 scanf(" %d",(p+i));
+	 if(*(p+i)<100||p[i]>999){
+		printf("\nInvaild...");
+		continue;
+	 }
+	 i++;
+	}
+}
+
+
+void disp(int * p,int flg){
+	int i;
+	if(flg==1){
+	 printf("\nAfter");
+	}
+	else{
+	 printf("\nBefour");
+	}
+	printf(" Sorting:-\n");
+	for(i=0;i<m;i++){
+	 printf("\n%d",*(p+i));
+	}
+}
+
+
+int index(int val,int pos){
+	int dig;
+	switch(pos){
+	 case 1: dig = val%10;
+		 break;
+
+	 case 2:dig = ((val/10)%10);
+		break;
+
+	 case 3:dig = val/100;
+		break;
+	}
+	return dig;
+}
+
+
+void init(){
+	int i =0;
+	for(;i<10;i++){
+	 q[i].rr = -1;
+	 q[i].fr =0;
+	}
+}
+
+void insert(int * p,int pos) {
+	 int i =0,dig;
+	 init();
+	 while(i<10){
+	  dig = index(p[i],pos);
+	  q[dig].arr[++q[dig].rr]=p[i];
+	  i++;
+	 }
+}
+
+void remque(int * p){
+	int i =0,j,k=0;
+	while(i<10){
+	 j = 0;
+	 while(j<=q[i].rr){
+	  p[k] = q[i].arr[j];
+	  k++;
+	  j++;
+	 }
+	 i++;
+	}
+}
+
+void radix(int *p){
+	int i = 1;
+	while(i<=3){
+	 insert(p,i);
+	 remque(p);
+	 i++;
+	}
+}
+
+void main(){
+	int x[m];
+	input(x);
+	disp(x,0);
+	radix(x);
+	disp(x,1);
+	getch();
+}
