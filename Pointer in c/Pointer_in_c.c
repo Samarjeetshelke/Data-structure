@@ -30,7 +30,18 @@ void main(){
 
     printf(" &(*z) : %d\n",&(*z));
 
-
-
-
 }
+
+Output:
+value of x : 10
+Address of x : 381679420
+Value at  *Y that is x : 10
+Adress of Y : 381679408
+Value at *(&y) that is adress of x: 381679420
+Value at **(&y) that is value at x : 10
+Value of z : 381679408
+Address of z : 381679400
+Value at z : 381679420
+value at value at z  **z : 10
+value at &z : 381679408
+&(*z) : 381679408
