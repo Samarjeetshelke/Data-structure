@@ -23,6 +23,26 @@ void addStart(int id){
     head = a;
 }
 
+void addAfter(int vald){
+    node * a= head;
+    int d;
+    node * b,* tmp;
+    // while(a!=NULL&&a->id==vald){
+        
+
+    // }
+    for(;a!=NULL&&a->id==vald;a=a->next){
+        printf("Enter Val: ");
+        scanf("%d",&d);
+        b = createnode(d);
+        tmp = a->next;
+        a->next = b;
+        b->next = tmp;
+        return;
+    }
+    printf("ID not found..");
+}
+
 void addEnd(int id){
     node * s = head;
     if(s==NULL){
@@ -56,7 +76,7 @@ void main(){
         //clrscr();
         getch();
         printf("---Student Management System---");
-        printf("\n1.Display\n2.Add Node(Start)\n3.Add Node(End)");
+        printf("\n1.Display\n2.Add Node(Start)\n3.Add Node(End)\n4.Add After");
         printf("\nEnter Option..");
         scanf("%d",&opt);
 
@@ -79,8 +99,16 @@ void main(){
                     getch();
                     break;
 
+            case 4: printf("Enter Search ID: ");
+                    scanf("%d",&id);
+                    addAfter(id);
+                    break;
+
             default: exit(1);
                      break;
         }
     }
+    
+    
+
 }
