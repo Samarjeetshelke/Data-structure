@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<conio.h>
+//#include<conio.h>
 #include<stdlib.h>
 
 typedef struct node{
@@ -56,7 +56,28 @@ void addEnd(int id){
     }
 }
 
+void deleteHead(){
+    head = head->next;
+}
+
+void isSort(){
+    node * a = head;
+    node * b;
+
+    if(a==NULL){printf("List Is Empty.."); return;}
+    while(a->next!=NULL){
+        b=a->next;
+        if(a->id > b->id){
+            printf("List Is Not Sorted");
+            return;
+        }
+        a=a->next;
+    }
+    printf("List Is Sorted..");
+}
 void display(){
+        if(head==NULL){printf("List Is Empty.."); return;}
+
     node * s = head;
     printf("\nStudent ids: ");
     while(s!=NULL){
@@ -74,9 +95,9 @@ void main(){
     while (1)
     {   
         //clrscr();
-        getch();
+       // getch();
         printf("---Student Management System---");
-        printf("\n1.Display\n2.Add Node(Start)\n3.Add Node(End)\n4.Add After");
+        printf("\n1.Display\n2.Add Node(Start)\n3.Add Node(End)\n4.Add After\n5.Delete Head\n6.Is Sorted");
         printf("\nEnter Option..");
         scanf("%d",&opt);
 
@@ -90,18 +111,24 @@ void main(){
                     // printf("\nEnter the Name..");
                     // scanf("%d",&nm);
                     addStart(id);
-                    getch();
+                   // getch();
                     break;
 
             case 3: printf("\nEnter the value..");
                     scanf("%d",&id);
                     addEnd(id);
-                    getch();
+                   // getch();
                     break;
 
             case 4: printf("Enter Search ID: ");
                     scanf("%d",&id);
                     addAfter(id);
+                    break;
+            
+            case 5:deleteHead();
+                    break;
+
+            case 6:isSort();
                     break;
 
             default: exit(1);
