@@ -85,3 +85,30 @@ void display(){
 Info:
 
 To display all node from the list.
+
+**5.AddAfter**
+
+Code:
+<pre>
+<code>
+void addAfter(int vald){
+    node * a= head;
+    int d;
+    node * b,* tmp;
+
+    for(;a!=NULL&&a->id==vald;a=a->next){
+        printf("Enter Val: ");
+        scanf("%d",&d);
+        b = createnode(d);
+        tmp = a->next;
+        a->next = b;
+        b->next = tmp;
+        return;
+    }
+    printf("ID not found..");
+}
+</code>
+</pre>
+
+Info:
+To add a new add after a searched value.
