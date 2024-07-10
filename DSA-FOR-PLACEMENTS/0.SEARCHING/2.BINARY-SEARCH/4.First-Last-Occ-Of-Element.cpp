@@ -51,3 +51,64 @@ int main() {
 
     return 0;
 }
+
+//
+class Solution {
+public:
+
+    int firstOcc(vector<int>&arr,int x){
+      int s=0,e=arr.size()-1;
+      int ans =-1;
+
+      while(s<=e){
+        int mid =(s+e)/2;
+
+        if(arr[mid]==x){
+            ans = mid;
+            e = mid-1;
+        }
+        else if(x>arr[mid]){
+            s =mid+ 1;
+
+        }
+        else{
+            e = mid-1;
+        }
+      }
+
+
+      return ans;  
+    }
+
+    int lastOcc(vector<int>&arr,int x){
+      int s=0,e=arr.size()-1;
+      int ans =-1;
+
+      while(s<=e){
+        int mid =(s+e)/2;
+
+        if(arr[mid]==x){
+            ans = mid;
+            s = mid+1;
+        }
+        else if(x>arr[mid]){
+            s =mid+ 1;
+
+        }
+        else{
+            e = mid-1;
+        }
+      }
+
+
+      return ans;  
+    }
+    vector<int> searchRange(vector<int>& nums, int target) {
+        vector<int> ans;
+
+        ans.push_back(firstOcc(nums,target));
+        ans.push_back(lastOcc(nums,target));
+
+        return ans;
+    }
+};
