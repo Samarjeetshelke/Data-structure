@@ -30,3 +30,13 @@ int main() {
     
     return 0;
 }
+
+
+
+//Easy One
+//with noextra place
+for(int i=1;i<demo.size();i++){
+       if(demo[i-1]==demo[i]){
+           demo.erase(demo.begin()+i);
+       }
+}
