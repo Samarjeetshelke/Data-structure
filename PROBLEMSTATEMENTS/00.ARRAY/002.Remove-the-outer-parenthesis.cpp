@@ -14,7 +14,7 @@ int main() {
     stack<char>stack;
     
     int i=1;
-    ans.push_back(demo[i]);
+    ans.push_back(demo[0]);
     while(i<=demo.size()){
         if(demo[i-1]!=demo[i]){
             ans.push_back(demo[i]);
